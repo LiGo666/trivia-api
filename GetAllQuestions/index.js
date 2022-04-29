@@ -6,8 +6,8 @@ module.exports = async function(context, req) {
   context.res = {
     body: questions.map(q => {
       return {
-        questions: q.question,
-        answers: q.incorrect_answers.concat([q.correct_answer]).sort()
+        QUESTIONS: q.question,
+        ANSWERS: q.incorrect_answers.concat([q.correct_answer]).sort()
       };
     })
   };
